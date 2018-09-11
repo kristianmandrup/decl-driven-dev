@@ -42,13 +42,13 @@ select properties:
 - ...
 ```
 
-Use resource retrieved from URL
+Use entity resource retrieved from URL
 
 `$ entity new user -r bit.ly/abc123`
 
-Or use alias to resource
+Or use alias to resource (from local mapping to URL)
 
-`$ entity new user -a tecla5-user`
+`$ entity new user -a my-user`
 
 ## Properties
 
@@ -61,12 +61,18 @@ Each Entity may always have:
   - created
   - updated
 
-Each Entity modified generates:
+Each Entity generates:
 
 - `entities/entity/[entity]-def.yml` file
 - `entities/entity/data/[entity].json` sample data (using faker)
 - `entities/entity/schema/[entity]-schema.json` JSON schema
 - `entities/entity/schema/[entity]-schema.test.js` JSON schema test using sample data file
+- ...
+
+See more:
+
+- [Entity](./entities/Entity.md)
+- [JSON conversions](./entities/JSON.md)
 
 ## Generate
 
@@ -107,14 +113,14 @@ For an entity define actions that can be performed
 
 ## Application
 
-### Displays
+An application primarily consists of the following:
 
-### Routers
-
-### Forms
-
-### Session
-
-### Stores
-
-### APIs
+- [Application](./application/Application.md)
+- [Displays](./displays/Displays.md)
+- [Routes](./routes/Routes.md)
+- [Forms](./forms/Forms.md)
+- [Session](./session/Session.md)
+- [Stores](./stores/Stores.md)
+- [APIs](./apis/APIs.md)
+- [Validators](./validators/Validators.md)
+- [Components](./components/Components.md)

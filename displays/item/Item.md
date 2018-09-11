@@ -12,6 +12,21 @@ A layout can be provided a styler (which components to use) and a theme via prov
 ## Property display
 
 ```js
+const components.generic = {
+  buttons: {
+    edit: {
+      icon: 'pencil',
+      action: 'edit'
+    },
+    delete: {
+      icon: 'trash',
+      action: 'delete'
+    }
+  }
+}
+```
+
+```js
 const display.product = {
   // component mappings
   components: [
@@ -20,7 +35,7 @@ const display.product = {
     // ...
   ],
   // map properties to component props
-  mapping: {
+  mappings: {
     title: {
       label: {
         prop: 'name'
@@ -35,18 +50,34 @@ const display.product = {
       border: true
     }
   },
+  controls: {
+    layout: {
+      display: 'row',
+      components: [
+        'delete',
+        'edit',
+      ]
+    }
+  },
   layout: {
-    title: {
-      first: true,
-    },
-    image: {
-      after: 'title',
-    },
-    price: {
-      after: 'image'
-    },
-    disclaimer: {
-      last: true
+    display: 'stack',
+    components: {
+      // relative positioning using first, last, after and before
+      title: {
+        first: true,
+      },
+      image: {
+        after: 'title',
+      },
+      price: {
+        after: 'image'
+      },
+      actions: {
+        before: 'disclaimer'
+      }
+      disclaimer: {
+        last: true
+      }
     }
   }
 }

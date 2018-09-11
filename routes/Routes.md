@@ -1,11 +1,11 @@
-# Router
+# Routes
 
-The Router is a top-level app entity, injected via `withRouter()` HOC to make it available for all nested children if/when needed.
+The `Router` is a top-level app entity, injected via `withRouter()` HOC to make it available for all nested children if/when needed.
 
 The app will usually have different named route sections, such as for master-detail views of different entities
 
 ```js
-const router = {
+const routes = {
   type: 'react-router',
   named: {
     app: {
@@ -60,7 +60,7 @@ const router = {
 };
 ```
 
-## Use routers in displays
+## Use routes in displays
 
 ```js
 layouts["nav-list"] = {
@@ -121,7 +121,7 @@ const display = {
       mapping: {
         filter: "text-query",
         sort: false,
-        router: "products",
+        routes: "products",
         cursor: "pagination",
         select: "product.listItem" // what to display when list item selected
       },
@@ -146,7 +146,7 @@ const display = {
     },
     instances: {
       listItem: {
-        router: "productRouter"
+        routes: "product"
       }
     }
   }

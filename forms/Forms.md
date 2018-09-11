@@ -1,11 +1,17 @@
 # Forms
 
-## Form builder
+## Form builders
 
 - [react-final-form](https://github.com/final-form/react-final-form)
-- [mobx-form-factory](https://github.com/kristianmandrup/mobx-form-factory)
+- [mobx-form-model](https://github.com/hrgui/mobx-form-model)
 
-## Building from declarations
+Also see [mobx-form-factory](https://github.com/kristianmandrup/mobx-form-factory) which is the source for the declaration schema seen below
+
+### Alternative form builders
+
+- [Formik](https://github.com/jaredpalmer/formik) uses [Yup](https://github.com/jquense/yup) as well
+
+## Building Forms from declarations
 
 ### Form model
 
