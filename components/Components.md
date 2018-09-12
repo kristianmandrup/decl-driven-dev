@@ -12,16 +12,21 @@ const components = {
 ## Generic
 
 ```js
-actions.generic = createComponents({
+import { SimpleRating } from 'simple-rating'
+
+components.generic = createComponents({
   kind: 'generic'
   environment: "dev",
 }, {
   // ...
   rating: {
-    component: SimpleRating,
+    component: SimpleRating.component,
     // defaults
     props: {
-      size: 'small'
+      exposed: SimpleRating.props,
+      defaults: {
+        size: 'small'
+      }
     }
   }
   // ...
@@ -31,7 +36,7 @@ actions.generic = createComponents({
 ## Named
 
 ```js
-actions.generic = createComponents({
+components.named = createComponents({
   kind: 'named'
   environment: "dev",
 }, {
