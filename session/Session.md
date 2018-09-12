@@ -15,17 +15,55 @@ Make it as easy as Amplify using various pluggable Session providers (adapters):
 
 ## Login
 
-## Session Adapters
-
-### Adapter
+## Session providers
 
 ```js
-const adapters.amplify = {
-  registration: {
-    // ...
-  },
-  login: {
-    // ...
-  }
+import { amplify } from "./config";
+
+export const providers = {
+  amplify
+};
+```
+
+### Amplify Session provider
+
+```js
+import { config } from "./config";
+
+// adapter is the actual function that can adapt and provide the session given the configuration
+import { adapter } from "./adapter";
+
+export const amplify = {
+  type: "provider",
+  name: "amplify",
+  adapter,
+  config
+};
+```
+
+### Amplify adapter
+
+```js
+export const function(config = {}): Session {
+  //
+  // return session
 }
+```
+
+### Adapter config
+
+```js
+export const config = {
+  name: "simple",
+  // to ensure it is only used for amplify adapter
+  adapter: "amplify",
+  contexts: {
+    registration: {
+      // ...
+    },
+    login: {
+      // ...
+    }
+  }
+};
 ```
