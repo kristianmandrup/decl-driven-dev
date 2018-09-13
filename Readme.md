@@ -113,14 +113,19 @@ For an entity define actions that can be performed
 
 ## Application
 
-An application primarily consists of the following:
+An application primarily consists primarily of the following:
 
+- [Config](./config/Config.md)
 - [Application](./application/Application.md)
+- [Entities](./entities/Entity.md)
 - [Displays](./displays/Displays.md)
+- [Components](./components/Components.md)
+- [Stores](./stores/Stores.md)
+- [APIs](./apis/APIs.md)
+
+Additionally:
+
 - [Routes](./routes/Routes.md)
 - [Forms](./forms/Forms.md)
 - [Session](./session/Session.md)
-- [Stores](./stores/Stores.md)
-- [APIs](./apis/APIs.md)
 - [Validators](./validators/Validators.md)
-- [Components](./components/Components.md)

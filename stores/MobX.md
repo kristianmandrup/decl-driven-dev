@@ -1,5 +1,44 @@
 # MobX
 
+## Multiple stores
+
+An effective pattern is to create a RootStore that instantiates all stores, and share references. The advantage of this pattern is:
+
+- Simple to set up.
+- Supports strong typing well.
+- Makes complex unit tests easy as you just have to instantiate a root store.
+
+Example:
+
+```js
+class RootStore {
+  constructor() {
+    this.userStore = new UserStore(this);
+    this.todoStore = new TodoStore(this);
+  }
+}
+
+class UserStore {
+  constructor(rootStore) {
+    this.rootStore = rootStore;
+  }
+
+  getTodos(user) {
+    // access todoStore through the root store
+    return this.rootStore.todoStore.todos.filter(todo => todo.author === user);
+  }
+}
+
+class TodoStore {
+  @observable
+  todos = [];
+
+  constructor(rootStore) {
+    this.rootStore = rootStore;
+  }
+}
+```
+
 ## Example: Todo store
 
 This store uses a transport layer to connect to a remote api/server to receive notification on store updates which are used to update local cache/store
