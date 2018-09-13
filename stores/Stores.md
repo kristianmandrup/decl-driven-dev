@@ -1,14 +1,45 @@
 # Stores
 
+A number of stores can be supported through a simple adapter for each
+
 - Redux
 - MobX
 - Immer
-- GraphQL
 - Unstated
-- Watermelon
 - ...
 
+## Store properties
+
+- [models](./models/Models.md)
+- [middleware](./models/Models.md) (optional)
+- [transport](./transports/Transports.md) (optional)
+
+Note: middleware and transport can be configured individually for each model if needed.
+This means that you can sync models with different backends or APIs, f.ex some using in-memory backing while others connect to a server backend/api etc.
+
+## Redux
+
+- model (implicit)
+- actions
+- reducers
+- selectors (views)
+- middleware
+
 ## MobX
+
+- model
+- actions
+- views
+- middleware
+
+## MobX State Tree
+
+- model (with types and validation)
+- actions
+- views
+- middleware
+
+Note: You can adapt a MobX state tree to Redux as well.
 
 ### JSON schema to MobX
 
@@ -20,98 +51,6 @@ See:
 
 - [json-mobx](https://github.com/danielearwicker/json-mobx)
 - [mobx for data](https://danielearwicker.github.io/json_mobx_Like_React_but_for_Data_Part_2.html)
-
-## GraphQL
-
-## JSON GraphQL server
-
-```js
-module.exports = {
-  posts: [
-    { id: 1, title: "Lorem Ipsum", views: 254, user_id: 123 },
-    { id: 2, title: "Sic Dolor amet", views: 65, user_id: 456 }
-  ],
-  users: [{ id: 123, name: "John Doe" }, { id: 456, name: "Jane Doe" }],
-  comments: [
-    {
-      id: 987,
-      post_id: 1,
-      body: "Consectetur adipiscing elit",
-      date: new Date("2017-07-03")
-    },
-    {
-      id: 995,
-      post_id: 1,
-      body: "Nam molestie pellentesque dui",
-      date: new Date("2017-08-17")
-    }
-  ]
-};
-```
-
-GraphQL Types
-
-```js
-{
-    Post(id: 1) {
-        id
-        title
-        views
-        User {
-            name
-        }
-        Comments {
-            date
-            body
-        }
-    }
-}
-```
-
-```js
-type Query {
-  Post(id: ID!): Post
-  allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): [Post]
-  _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): ListMetadata
-}
-type Mutation {
-  createPost(data: String): Post
-  updatePost(data: String): Post
-  removePost(id: ID!): Boolean
-}
-type Post {
-    id: ID!
-    title: String!
-    views: Int!
-    user_id: ID!
-    User: User
-    Comments: [Comment]
-}
-type PostFilter {
-    q: String
-    id: ID
-    title: String
-    views: Int
-    views_lt: Int
-    views_lte: Int
-    views_gt: Int
-    views_gte: Int
-    user_id: ID
-}
-type ListMetadata {
-    count: Int!
-}
-scalar Date
-```
-
-### JSON schema to GraphQL schema
-
-- [graphql-apollo-json-to-schema](https://www.npmjs.com/package/graphql-apollo-json-to-schema)
-- [graphql-schema-from-json](https://github.com/marmelab/graphql-schema-from-json)
-
-### GraphQL schema to JSON schema
-
-- [graphql-json-schema](https://www.npmjs.com/package/graphql-json-schema)
 
 ### Immer
 

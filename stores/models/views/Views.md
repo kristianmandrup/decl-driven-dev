@@ -1,4 +1,6 @@
-# Views
+# Model Views
+
+Model Views are used to add computed properties such as aggregations, virtual props etc. to the model sent to display.
 
 ```js
 const views = {
@@ -8,7 +10,9 @@ const views = {
 };
 ```
 
-## Generic views
+## Generic view methods
+
+Generic view methods can be reused across models
 
 ```js
 views.generic = {
@@ -21,7 +25,9 @@ views.generic = {
 };
 ```
 
-## Layouts
+## View layouts
+
+Just like actions you can have multiple variants of named views that can then be composed as needed in the application views
 
 ```js
 const views.layouts = {

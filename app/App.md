@@ -37,24 +37,24 @@ Factories can be configured on the app level to act as defaults.
 The `components` can be overridden on any `display` if needed.
 
 ```js
-  factories: {
-    components: {
-      map: buildComponents,
-      single: linkComponent
-    },
-    actions: {
-      map: $actions.createAll,
-      single: $actions.createAction
-    }
-    store: {
-      local: $stores.redux.create({
-        sagas: true
-      },
-      remote: $stores.graphQL.createApolloClient({
-        url: 'localhost:4000'
-      })
-    }
+const factories = {
+  components: {
+    map: buildComponents,
+    single: linkComponent
   },
+  actions: {
+    map: $actions.createAll,
+    single: $actions.createAction
+  }
+  store: {
+    local: $stores.redux.create({
+      sagas: true
+    },
+    remote: $stores.graphQL.createApolloClient({
+      url: 'localhost:4000'
+    })
+  }
+}
 ```
 
 ## Modules
