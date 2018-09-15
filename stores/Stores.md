@@ -8,11 +8,11 @@ A number of stores can be supported through a simple adapter for each
 - Unstated
 - ...
 
-## Store properties
+## Concepts
 
-- [models](./models/Models.md)
-- [middleware](./models/Models.md) (optional)
-- [transport](./transports/Transports.md) (optional)
+- [Models](./models/Models.md)
+- [Middleware](./models/Models.md) (optional)
+- [Transport](./transports/Transports.md) (optional)
 
 Note: middleware and transport can be configured individually for each model if needed.
 This means that you can sync models with different backends or APIs, f.ex some using in-memory backing while others connect to a server backend/api etc.

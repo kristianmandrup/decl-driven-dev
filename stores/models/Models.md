@@ -17,8 +17,8 @@ The models can have one or more views to filter or transform the model for parti
 
 ## Collection
 
-...
+Actions that can be acted upon a collection.
 
 ## Item
 
-...
+Actions that can be acted upon an item

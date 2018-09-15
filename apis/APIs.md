@@ -35,7 +35,7 @@ PS: Use currying to avoid passing the type argument
 
 - `update({type, id, item})`
 - `delete({type, id, item})`
-- `({type, id, item, name})` get named property (can be a child collection) of item
+- `get({type, id, item, name})` get named property (can be a child collection) of item
 
 ## Memory
 

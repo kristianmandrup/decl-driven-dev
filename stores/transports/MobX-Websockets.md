@@ -1,4 +1,4 @@
-## Transport example
+# Transport MobX Websockets
 
 [MobX Websocket store](https://www.npmjs.com/package/mobx-websocket-store)
 
@@ -27,7 +27,7 @@ autorun(() => {
 });
 ```
 
-### Firebase example
+## Firebase example
 
 ```js
 import MobxWebsocketStore from 'mobx-websocket-store';
