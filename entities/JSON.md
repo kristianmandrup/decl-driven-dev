@@ -50,10 +50,16 @@ Convert JSON Objects to MySQL Table Schema, JSON Schema, Mongoose Schema, ClickH
 ## Schema to TypeScript
 
 - [json-schema-to-typescript](https://github.com/bcherny/json-schema-to-typescript)
+- [@gql2ts/from-schema](https://www.npmjs.com/package/@gql2ts/from-schema) generate a namespace for a GraphQL Schema with all possible interfaces/types included.
 
 ## JSON to JavaScript serializer
 
 - [serializr](https://github.com/mobxjs/serializr)
+
+## Elastic search
+
+- [es-mapping-to-schema](https://www.npmjs.com/package/es-mapping-to-schema)
+- [json-schema-to-es-mapping](https://github.com/kristianmandrup/json-schema-to-es-mapping)
 
 ## Mongoose
 
