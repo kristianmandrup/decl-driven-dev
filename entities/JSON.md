@@ -58,7 +58,8 @@ Convert JSON Objects to MySQL Table Schema, JSON Schema, Mongoose Schema, ClickH
 ## Mongoose
 
 - [mongoose-schema-jsonschema](https://www.npmjs.com/package/mongoose-schema-jsonschema)
-- [json-schema-to-mongoose](https://github.com/jon49/json-schema-to-mongoose)
+- [json-schema-to-mongoose](https://github.com/kristianmandrup/convert-json-schema-to-mongoose)
+- ... many alternatives
 
 ## TypeORM
 
@@ -69,3 +70,17 @@ entitySchemas: [
   Object.assign({ target: Post }, require(__dirname + "/Schemas/Post.json"))
 ];
 ```
+
+## Schema to GraphQL types
+
+- [jsonschema-to-graphql](https://www.npmjs.com/package/jsonschema-to-graphql)
+- [json-schema-to-graphql-types](https://www.npmjs.com/package/json-schema-to-graphql-types)
+- []()
+
+## Forms
+
+[Build React forms based on GraphQL API](https://medium.com/@wittydeveloper/build-react-forms-based-on-graphql-apis-7e3acb1f91d7)
+
+- [react-apollo-form](https://github.com/wittydeveloper/react-apollo-form)
+- [react-jsonschema-form](https://github.com/mozilla-services/react-jsonschema-form/)
+- [Getting started: build a GraphQL Form in 5 minutes](https://github.com/wittydeveloper/react-apollo-form/wiki/Getting-started:-build-a-GraphQL-Form-in-5-minutes)
