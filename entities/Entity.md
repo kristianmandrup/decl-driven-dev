@@ -2,6 +2,9 @@
 
 Define a full entity by extending from multiple types of entity models/schemas
 
+- [JSON](./JSON.md)
+- [Generators](./Generators.md)
+
 ## Implied format
 
 Using all defaults (conventions)

@@ -37,6 +37,12 @@ jsf.resolve(schema).then(function(sample) {
 });
 ```
 
+## JSON data to Schemas
+
+Convert JSON Objects to MySQL Table Schema, JSON Schema, Mongoose Schema, ClickHouse Schema, Google BigQuery, or a Generic template for documentation, code generation, and more.
+
+[generate-schema](https://github.com/Nijikokun/generate-schema)
+
 ## Schema to Yup Validation
 
 - [json-schema-to-yup](https://www.npmjs.com/package/json-schema-to-yup)
@@ -48,3 +54,18 @@ jsf.resolve(schema).then(function(sample) {
 ## JSON to JavaScript serializer
 
 - [serializr](https://github.com/mobxjs/serializr)
+
+## Mongoose
+
+- [mongoose-schema-jsonschema](https://www.npmjs.com/package/mongoose-schema-jsonschema)
+- [json-schema-to-mongoose](https://github.com/jon49/json-schema-to-mongoose)
+
+## TypeORM
+
+- [Entity configuration via JSON Schema](https://github.com/typeorm/typeorm/issues/1818)
+
+```js
+entitySchemas: [
+  Object.assign({ target: Post }, require(__dirname + "/Schemas/Post.json"))
+];
+```
